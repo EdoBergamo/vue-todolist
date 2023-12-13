@@ -9,5 +9,10 @@ createApp({
         { text: 'Asdadsadas', done: false },
       ]
     }
+  },
+  methods: {
+    removeTodo(index) {
+      this.todos.splice(index, 1)
+    }
   }
 }).mount('#app')

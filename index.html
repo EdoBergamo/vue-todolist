@@ -14,6 +14,7 @@
         <span :style='{ "text-decoration": todo.done ? "line-through" : "none"}'>
           {{ todo.text }}
         </span>
+        <button @click="removeTodo(index)">x</button>
       </li>
     </ul>
   </div>
