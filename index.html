@@ -9,12 +9,17 @@
 <body>
   <div id="app">
     <h1>Todo List</h1>
+
+    <div>
+      <input type="text" v-model="newTodoText" @keyup.enter="createTodo" placeholder="Inserisci un nuovo todo">
+      <button @click="createTodo" >Aggiungi</button>
+    </div>
     <ul>
       <li v-for="(todo, index) in todos" :key="index">
         <span :style='{ "text-decoration": todo.done ? "line-through" : "none"}'>
           {{ todo.text }}
         </span>
-        <button @click="removeTodo(index)">x</button>
+        <button @click="deleteTodo(index)">x</button>
       </li>
     </ul>
   </div>
