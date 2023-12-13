@@ -18,6 +18,9 @@ createApp({
         this.newTodoText = ''
       }
     },
+    updateTodo(index) {
+      this.todos[index].done = !this.todos[index].done
+    },
     deleteTodo(index) {
       this.todos.splice(index, 1)
     }
