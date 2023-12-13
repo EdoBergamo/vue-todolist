@@ -69,3 +69,8 @@ button:last-child {
 button:last-child:hover {
   background-color: #c82333;
 }
+
+.line {
+  text-decoration: line-through;
+  color: #c82333;
+}

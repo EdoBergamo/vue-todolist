@@ -16,7 +16,7 @@
     </div>
     <ul>
       <li v-for="(todo, index) in todos" :key="index">
-        <span :style='{ "text-decoration": todo.done ? "line-through" : "none"}' @click="updateTodo(index)">
+        <span :class='{ "line": todo.done}' @click="updateTodo(index)">
           {{ todo.text }}
         </span>
         <button @click="deleteTodo(index)">x</button>
